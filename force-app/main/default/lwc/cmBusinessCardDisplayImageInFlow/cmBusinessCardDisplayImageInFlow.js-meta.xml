@@ -11,6 +11,7 @@
       <property name="title" type="String" label="標題" role="inputOnly"/>
       <property name="altText" type="String" label="替代文字" role="inputOnly"/>
       <property name="contentVersionId" type="String" label="Content Version Id (068…)" role="inputOnly"/>
+      <property name="contentVersionIdsJson" type="String" label="Content Version Ids (JSON array)" role="inputOnly"/>
       <property name="contentDocumentId" type="String" label="Content Document Id (069…)" role="inputOnly"/>
       <property name="width" type="String" label="寬度（100% / 600px）" role="inputOnly"/>
       <property name="height" type="String" label="高度（auto / 300px）" role="inputOnly"/>

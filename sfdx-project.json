@@ -4,8 +4,8 @@
       "path": "force-app",
       "default": true,
       "package": "BusinessCardSnap",
-      "versionName": "ver 1.0.1",
-      "versionNumber": "1.0.1.NEXT"
+      "versionName": "ver 1.0.2",
+      "versionNumber": "1.0.2.NEXT"
     }
   ],
   "name": "BusinessCardSnap",
@@ -13,6 +13,8 @@
   "sfdcLoginUrl": "https://login.salesforce.com",
   "sourceApiVersion": "65.0",
   "packageAliases": {
-    "BusinessCardSnap": "0HoKj000000XuZYKA0"
+    "BusinessCardSnap": "0HoKj000000XuZYKA0",
+    "BusinessCardSnap@1.0.2-3": "04tKj000000fSv9IAE",
+    "BusinessCardSnap@1.0.2-4": "04tKj000000fSvEIAU"
   }
 }

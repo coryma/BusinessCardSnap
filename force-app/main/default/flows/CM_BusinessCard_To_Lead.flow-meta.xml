@@ -24,30 +24,6 @@
             <name>output</name>
         </outputParameters>
     </actionCalls>
-    <actionCalls>
-        <name>Parse_JSON_String_Array</name>
-        <label>Parse JSON String Array</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <actionName>CM_BusinessCard_Parse_String_Array</actionName>
-        <actionType>apex</actionType>
-        <connector>
-            <targetReference>Loop_varDocumentContents</targetReference>
-        </connector>
-        <flowTransactionModel>Automatic</flowTransactionModel>
-        <inputParameters>
-            <name>json</name>
-            <value>
-                <elementReference>varCardContentDocId</elementReference>
-            </value>
-        </inputParameters>
-        <nameSegment>CM_BusinessCard_Parse_String_Array</nameSegment>
-        <offset>0</offset>
-        <outputParameters>
-            <assignToReference>varContentDocumentIDs</assignToReference>
-            <name>values</name>
-        </outputParameters>
-    </actionCalls>
     <apiVersion>64.0</apiVersion>
     <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <assignments>
@@ -93,7 +69,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Parse_JSON_String_Array</targetReference>
+                <targetReference>CardReviewScreen</targetReference>
             </connector>
             <label>JobIdIsNotBlank</label>
         </rules>
@@ -123,21 +99,6 @@
     <environments>Default</environments>
     <interviewLabel>CM_BusinessCard_To_Lead {!$Flow.CurrentDateTime}</interviewLabel>
     <label>CM - BusinessCard To Lead</label>
-    <loops>
-        <name>Loop_varDocumentContents</name>
-        <label>Loop varDocumentContentIDs</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <collectionReference>varContentDocumentIDs</collectionReference>
-        <iterationOrder>Asc</iterationOrder>
-        <nextValueConnector>
-            <targetReference>CardReviewScreen</targetReference>
-        </nextValueConnector>
-        <noMoreValuesConnector>
-            <isGoTo>true</isGoTo>
-            <targetReference>CreateEvents</targetReference>
-        </noMoreValuesConnector>
-    </loops>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -218,12 +179,6 @@
                 </value>
             </inputParameters>
             <inputParameters>
-                <name>contentVersionId</name>
-                <value>
-                    <elementReference>Loop_varDocumentContents</elementReference>
-                </value>
-            </inputParameters>
-            <inputParameters>
                 <name>leadSource</name>
                 <value>
                     <elementReference>varLeadSource</elementReference>
@@ -246,9 +201,9 @@
             <extensionName>c:cmBusinessCardDisplayImageInFlow</extensionName>
             <fieldType>ComponentInstance</fieldType>
             <inputParameters>
-                <name>contentVersionId</name>
+                <name>contentVersionIdsJson</name>
                 <value>
-                    <elementReference>Loop_varDocumentContents</elementReference>
+                    <elementReference>varCardContentDocId</elementReference>
                 </value>
             </inputParameters>
             <inputParameters>
@@ -286,7 +241,7 @@
         </connector>
         <fields>
             <name>DisplayText1</name>
-            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 16px;&quot;&gt;{!$Label.CM_BC_Flow_Welcome_Title}&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;{!$Label.CM_BC_Flow_Welcome_Desc}&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldText>&lt;h2&gt;🤖 &lt;strong style=&quot;font-size: 16px;&quot;&gt;{!$Label.CM_BC_Flow_Welcome_Title}&lt;/strong&gt;&lt;/h2&gt;&lt;p&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;{!$Label.CM_BC_Flow_Welcome_Desc}&lt;/span&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
             <styleProperties>
                 <verticalAlignment>
@@ -419,13 +374,6 @@
         <isOutput>false</isOutput>
     </variables>
     <variables>
-        <name>varContentDocumentIDs</name>
-        <dataType>String</dataType>
-        <isCollection>true</isCollection>
-        <isInput>false</isInput>
-        <isOutput>false</isOutput>
-    </variables>
-    <variables>
         <name>varDisplayUrl</name>
         <dataType>String</dataType>
         <isCollection>false</isCollection>
@@ -469,7 +417,7 @@
         <name>varLeadSource</name>
         <dataType>String</dataType>
         <isCollection>false</isCollection>
-        <isInput>true</isInput>
+        <isInput>false</isInput>
         <isOutput>false</isOutput>
         <value>
             <stringValue>Cold Call</stringValue>

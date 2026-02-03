@@ -20,6 +20,13 @@ export default class CmBusinessCardDisplayImageInFlow extends LightningElement {
   @api altText = LABELS.imageTitle;
   @api contentVersionId;      // 068… (can be provided alone)
   @api contentDocumentId;     // 069… (can also be provided directly)
+  _contentVersionIdsJson;
+  @api
+  get contentVersionIdsJson() { return this._contentVersionIdsJson; }
+  set contentVersionIdsJson(v) {
+    this._contentVersionIdsJson = v;
+    this.prepareCandidates();
+  }
   @api width = '100%';        // '100%' / '600px'
   @api height = 'auto';       // 'auto' / '300px'
   @api objectFit = 'contain'; // contain | cover | fill | none | scale-down
@@ -37,6 +44,7 @@ export default class CmBusinessCardDisplayImageInFlow extends LightningElement {
   // ===== State =====
   @track isLoading = false;
   @track errorMsg;
+  @track imageItems = [];
   _candidates = [];
   _idx = 0;
   labels = LABELS;
@@ -67,6 +75,9 @@ export default class CmBusinessCardDisplayImageInFlow extends LightningElement {
   }
   get showDownload() {
     return !!this.showDownloadLink && !!this.downloadUrl;
+  }
+  get hasMultiImages() {
+    return Array.isArray(this.imageItems) && this.imageItems.length > 0;
   }
 
   // ===== Base prefix: Experience Cloud support =====
@@ -118,16 +129,61 @@ export default class CmBusinessCardDisplayImageInFlow extends LightningElement {
     this.prepareCandidates();
   }
 
+  parseIds(jsonValue) {
+    if (!jsonValue) return [];
+    try {
+      const parsed = JSON.parse(jsonValue);
+      if (!Array.isArray(parsed)) return [];
+      return parsed.map(String).map(v => v.trim()).filter(v => v);
+    } catch {
+      return [];
+    }
+  }
+
+  buildCandidatesForId(anyId) {
+    const id = String(anyId || '');
+    const pref = id.substring(0, 3);
+    if (pref === '069') {
+      // ContentDocumentId fallback (no version id available)
+      return [this.buildDocumentDownload(id)];
+    }
+    return [
+      this.buildVersionInline(id),
+      this.buildRendition(id, 'THUMB1200BY900'),
+      this.buildRendition(id, 'THUMB720BY480'),
+      this.buildVersionDownload(id)
+    ];
+  }
+
   prepareCandidates() {
     this.errorMsg = undefined;
     this.loadStatus = '';
     this.isLoading = true;
     this._idx = 0;
     this._candidates = [];
+    this.imageItems = [];
 
     // 1) Full URL provided externally → highest priority
     if (this.imageUrl && this.imageUrl.trim()) {
       this._candidates.push(this.imageUrl.trim());
+    }
+
+    // 2) JSON array of version ids (multi-image)
+    const ids = this.parseIds(this._contentVersionIdsJson);
+    if (!this._candidates.length && ids.length) {
+      this.imageItems = ids.map((id) => {
+        const candidates = this.buildCandidatesForId(id);
+        return {
+          id,
+          candidates,
+          idx: 0,
+          url: candidates[0],
+          downloadUrl: id.startsWith('069') ? this.buildDocumentDownload(id) : this.buildVersionDownload(id),
+          error: ''
+        };
+      });
+      this.isLoading = false;
+      return;
     }
 
     // 2) Prefer 068 display (most stable on mobile: inline)
@@ -166,8 +222,32 @@ export default class CmBusinessCardDisplayImageInFlow extends LightningElement {
     this.loadStatus = 'failed';
     this.errorMsg = LABELS.imageLoadFailed;
   }
+  onMultiImgError(event) {
+    const index = Number(event?.currentTarget?.dataset?.index);
+    if (Number.isNaN(index)) return;
+    const items = Array.isArray(this.imageItems) ? [...this.imageItems] : [];
+    const item = items[index];
+    if (!item) return;
+    const next = (item.idx || 0) + 1;
+    if (next < item.candidates.length) {
+      item.idx = next;
+      item.url = item.candidates[next];
+      items[index] = item;
+      this.imageItems = items;
+      return;
+    }
+    item.error = LABELS.imageLoadFailed;
+    items[index] = item;
+    this.imageItems = items;
+  }
   openDownload() {
     const url = this.downloadUrl;
     if (url) window.open(url, '_blank'); // eslint-disable-line no-restricted-globals
+  }
+  openDownloadMulti(event) {
+    const index = Number(event?.currentTarget?.dataset?.index);
+    if (Number.isNaN(index)) return;
+    const item = this.imageItems?.[index];
+    if (item?.downloadUrl) window.open(item.downloadUrl, '_blank'); // eslint-disable-line no-restricted-globals
   }
 }
