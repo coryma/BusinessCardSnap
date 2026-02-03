@@ -12,8 +12,8 @@
 
 ### 1.2 安裝連結
 
-- Production：`https://login.salesforce.com/packaging/installPackage.apexp?p0=04tKj000000fSuuIAE`
-- Sandbox：`https://test.salesforce.com/packaging/installPackage.apexp?p0=04tKj000000fSuuIAE`
+- Production：`https://login.salesforce.com/packaging/installPackage.apexp?p0=04tKj000000fSvEIAU`
+- Sandbox：`https://test.salesforce.com/packaging/installPackage.apexp?p0=04tKj000000fSvEIAU`
 
 ### 1.3 安裝選項（安裝畫面）
 
