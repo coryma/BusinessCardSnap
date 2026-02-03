@@ -1,0 +1,14 @@
+{
+  "orgName": "BusinessCardSnap Packaging",
+  "edition": "Developer",
+  "features": ["EnableSetPasswordInApi", "EinsteinGPT"],
+  "settings": {
+    "lightningExperienceSettings": {
+      "enableS1DesktopEnabled": true
+    },
+    "languageSettings": {
+      "enableTranslationWorkbench": true,
+      "enableEndUserLanguages": true
+    }
+  }
+}

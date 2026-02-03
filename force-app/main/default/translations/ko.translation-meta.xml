@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customTabs>
+        <name>CM_BusinessCardSnap</name>
+        <label>AI 명함 어시스턴트</label>
+    </customTabs>
+    <customLabels>
+        <name>CM_BC_Card_FallbackName</name>
+        <label>이 명함</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_CreateOption_Contact</name>
+        <label>기존 계정을 연결하고 연락처 생성</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_CreateOption_Lead</name>
+        <label>새 리드 생성</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Err_BatchIdRequired</name>
+        <label>BatchId가 필요합니다.</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Err_ContentVersionIdRequired</name>
+        <label>ContentVersionId가 필요합니다.</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Err_CreateTempFailed</name>
+        <label>명함 임시 레코드를 생성하지 못했습니다: {0}</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Err_DuplicateMatch</name>
+        <label>기존 계정 매칭에 실패했습니다. 잠시 후 다시 시도하세요.</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Err_FileIdBlank</name>
+        <label>파일 ID가 비어 있습니다.</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Err_InvalidJsonArrayFromAI</name>
+        <label>AI 응답이 유효한 JSON 배열이 아닙니다. 응답: {0}</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Err_JsonParseFailed</name>
+        <label>JSON 파싱 실패 (항목 {0}): {1}</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Err_NoFiles</name>
+        <label>파일이 없습니다.</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Err_NoUsableFileVersion</name>
+        <label>사용 가능한 파일 버전을 찾을 수 없습니다(권한 부족 또는 최신 아님).</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Err_NotFinished</name>
+        <label>인식이 아직 완료되지 않았습니다. 잠시 기다려 주세요...</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Err_ProgressFetch</name>
+        <label>진행 상태를 가져오지 못했습니다.</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Err_PromptCallFailed</name>
+        <label>프롬프트 호출 중 오류: {0}</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Err_QueueJobFailed</name>
+        <label>임시 레코드는 생성했지만 백그라운드 인식 작업을 큐에 넣지 못했습니다: {0}</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Err_ReadFileVersionFailed</name>
+        <label>파일 버전 읽기 실패: {0}</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Err_SelectAccountForCard</name>
+        <label>&quot;{0}&quot;에 연결할 계정을 선택하세요.</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Err_Unknown</name>
+        <label>알 수 없는 오류가 발생했습니다.</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Err_BatchIdNotReady</name>
+        <label>배치가 아직 생성되지 않았습니다. 먼저 명함을 업로드하세요.</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Err_Uploading</name>
+        <label>Batch Id가 생성될 때까지 기다린 후 다음 단계로 진행하세요.</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Fallback_BusinessCard</name>
+        <label>명함</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Flow_Success_Subtitle</name>
+        <label>리드 목록에서 최신 레코드를 확인하세요.</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Flow_Title</name>
+        <label>명함 인식</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Flow_Welcome_Desc</name>
+        <label>하나 이상의 명함이 포함된 파일을 업로드하거나 사진을 촬영하세요.</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Flow_Welcome_Title</name>
+        <label>AI 명함 어시스턴트에 오신 것을 환영합니다</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Image_Download</name>
+        <label>원본 다운로드</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Image_LoadFailed</name>
+        <label>이미지를 표시할 수 없습니다(지원되지 않는 형식 또는 권한 부족).</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Image_Loading</name>
+        <label>이미지 로딩 중</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Image_MissingParams</name>
+        <label>ContentVersionId / ContentDocumentId / ImageUrl이 없습니다</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Image_Title</name>
+        <label>명함 이미지</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Progress_Failed_Segment</name>
+        <label>, 실패 {0}</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Progress_Preparing</name>
+        <label>준비 중...</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Progress_Running</name>
+        <label>명함 인식 중... (처리 {0}/{1}{2})</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Remark_Prefix</name>
+        <label>비고: {0}</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Review_Account_Label</name>
+        <label>연락처를 추가할 계정 선택</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Review_Account_Placeholder</name>
+        <label>계정 선택</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Review_Desc_Label</name>
+        <label>설명(비고)</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Review_Dupe_Body</name>
+        <label>새 리드를 생성하거나 기존 계정에 연락처 정보를 추가하세요.</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Review_Dupe_Title</name>
+        <label>같은 회사명의 기존 계정</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Review_FooterNote</name>
+        <label>*오른쪽 아래의 &quot;다음&quot;을 클릭하여 제출</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Review_NoCards_Body</name>
+        <label>처리가 완료되었지만 이미지에서 명함을 찾지 못했습니다. &quot;다음&quot;으로 계속하거나 돌아가서 다시 업로드하세요.</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Review_NoCards_Title</name>
+        <label>명함이 인식되지 않았습니다</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Review_Spinner</name>
+        <label>인식 중</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Review_Title</name>
+        <label>명함 검토</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Upload_Label</name>
+        <label>명함 파일 선택(여러 개 가능)</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Upload_Status</name>
+        <label>{0}개 파일 업로드됨 · 배치 ID: {1}</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Upload_Title</name>
+        <label>명함 업로드</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Success_Button</name>
+        <label>리드 열기</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Success_Line_Prefix</name>
+        <label>성공적으로 생성됨</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Success_Line_Suffix</name>
+        <label>고객 레코드</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Success_Line_Suffix_Singular</name>
+        <label>고객 레코드</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Success_Title</name>
+        <label>완료</label>
+    </customLabels>
+</Translations>

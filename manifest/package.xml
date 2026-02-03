@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+  <types>
+    <members>CM_BusinessCard_Controller</members>
+    <members>CM_BusinessCard_Ocr_Job</members>
+    <members>CM_BusinessCard_Json_Parser</members>
+    <members>CM_BusinessCard_Parse_String_Array</members>
+    <members>CM_BusinessCard_Image_Helper</members>
+    <name>ApexClass</name>
+  </types>
+  <types>
+    <members>CM_BusinessCard_To_Lead</members>
+    <members>CM_BusinessCard_Create_Record_From_Event</members>
+    <name>Flow</name>
+  </types>
+  <types>
+    <members>CM_BusinessCard_Card_To_Lead</members>
+    <name>GenAiPromptTemplate</name>
+  </types>
+  <types>
+    <members>cmBusinessCardOcrUpload</members>
+    <members>cmBusinessCardReviewAsync</members>
+    <members>cmBusinessCardDisplayImageInFlow</members>
+    <members>fsc_drawLine</members>
+    <name>LightningComponentBundle</name>
+  </types>
+  <types>
+    <members>CM_BusinessCard__c</members>
+    <members>Business_Card_Processed__e</members>
+    <name>CustomObject</name>
+  </types>
+  <version>64.0</version>
+</Package>

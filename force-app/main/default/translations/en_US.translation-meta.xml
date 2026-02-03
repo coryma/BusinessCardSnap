@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customTabs>
+        <name>CM_BusinessCardSnap</name>
+        <label>AI Business Card Assistant</label>
+    </customTabs>
+    <customLabels>
+        <name>CM_BC_Card_FallbackName</name>
+        <label>this card</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_CreateOption_Contact</name>
+        <label>Link existing Account and create Contact</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_CreateOption_Lead</name>
+        <label>Create new Lead</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Err_BatchIdRequired</name>
+        <label>BatchId is required.</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Err_ContentVersionIdRequired</name>
+        <label>ContentVersionId is required.</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Err_CreateTempFailed</name>
+        <label>Failed to create business card staging records: {0}</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Err_DuplicateMatch</name>
+        <label>Failed to match existing accounts. Please try again later.</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Err_FileIdBlank</name>
+        <label>The file ID is blank.</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Err_InvalidJsonArrayFromAI</name>
+        <label>AI response is not a valid JSON array. Response: {0}</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Err_JsonParseFailed</name>
+        <label>JSON parse failed (item {0}): {1}</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Err_NoFiles</name>
+        <label>No files received.</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Err_NoUsableFileVersion</name>
+        <label>No usable file version found (missing permission or not the latest).</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Err_NotFinished</name>
+        <label>Recognition has not finished yet. Please wait...</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Err_ProgressFetch</name>
+        <label>Failed to retrieve progress.</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Err_PromptCallFailed</name>
+        <label>Error while calling Prompt: {0}</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Err_QueueJobFailed</name>
+        <label>Staging records created, but failed to enqueue background recognition: {0}</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Err_ReadFileVersionFailed</name>
+        <label>Failed to read file versions: {0}</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Err_SelectAccountForCard</name>
+        <label>Please select an account to link for "{0}".</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Err_Unknown</name>
+        <label>An unknown error occurred.</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Err_BatchIdNotReady</name>
+        <label>Batch has not been created yet. Please upload business cards first.</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Err_Uploading</name>
+        <label>Please wait until the Batch Id is generated before proceeding to the next step.</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Fallback_BusinessCard</name>
+        <label>Business Card</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Flow_Success_Subtitle</name>
+        <label>Please check the Leads list for the latest records.</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Flow_Title</name>
+        <label>Business Card Recognition</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Flow_Welcome_Desc</name>
+        <label>Upload a file or take a photo containing one or more business cards.</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Flow_Welcome_Title</name>
+        <label>Welcome to the AI business card assistant</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Image_Download</name>
+        <label>Download original</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Image_LoadFailed</name>
+        <label>Image cannot be displayed (unsupported format or insufficient permission).</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Image_Loading</name>
+        <label>Loading image</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Image_MissingParams</name>
+        <label>Missing ContentVersionId / ContentDocumentId / ImageUrl</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Image_Title</name>
+        <label>Business Card Image</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Progress_Failed_Segment</name>
+        <label>, failed {0}</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Progress_Preparing</name>
+        <label>Preparing...</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Progress_Running</name>
+        <label>Recognizing business cards... (processed {0}/{1}{2})</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Remark_Prefix</name>
+        <label>Remark: {0}</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Review_Account_Label</name>
+        <label>Select the Account to add the contact to</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Review_Account_Placeholder</name>
+        <label>Select an account</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Review_Desc_Label</name>
+        <label>Description (Remark)</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Review_Dupe_Body</name>
+        <label>Choose to create a new Lead, or add contact details to an existing Account.</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Review_Dupe_Title</name>
+        <label>Existing accounts with the same company name</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Review_FooterNote</name>
+        <label>*Click "Next" in the lower-right to submit</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Review_NoCards_Body</name>
+        <label>Processing finished, but no business cards were found in the images. You can continue with "Next" or go back to upload again.</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Review_NoCards_Title</name>
+        <label>No business cards recognized</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Review_Spinner</name>
+        <label>Recognizing</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Review_Title</name>
+        <label>Review Business Cards</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Upload_Label</name>
+        <label>Select business card files (multiple allowed)</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Upload_Status</name>
+        <label>Uploaded {0} files · Batch ID: {1}</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Upload_Title</name>
+        <label>Upload Business Cards</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Success_Button</name>
+        <label>Open Lead</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Success_Line_Prefix</name>
+        <label>Successfully created</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Success_Line_Suffix</name>
+        <label>customer records</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Success_Line_Suffix_Singular</name>
+        <label>customer record</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Success_Title</name>
+        <label>Completed</label>
+    </customLabels>
+</Translations>

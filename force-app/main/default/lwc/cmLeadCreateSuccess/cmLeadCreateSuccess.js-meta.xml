@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+  <apiVersion>61.0</apiVersion>
+  <isExposed>true</isExposed>
+  <masterLabel>CM Lead Create Success</masterLabel>
+  <targets>
+    <target>lightning__FlowScreen</target>
+    <target>lightning__RecordPage</target>
+    <target>lightning__AppPage</target>
+    <target>lightning__HomePage</target>
+  </targets>
+  <targetConfigs>
+    <targetConfig targets="lightning__FlowScreen">
+      <!-- ✅ Set to Integer -->
+      <property name="count" type="Integer" label="Success Count" role="inputOnly"/>
+      <property name="recordId" type="String" label="Lead Record Id (Optional)" role="inputOnly"/>
+      <property name="title" type="String" label="Card Title (Default: Completed)" role="inputOnly"/>
+      <property name="subtitle" type="String" label="Subtitle/Description (Optional)" role="inputOnly"/>
+      <property name="buttonLabel" type="String" label="Button Label (Default: Open Lead)" role="inputOnly"/>
+      <property name="showOpenButton" type="Boolean" label="Show Open Button" role="inputOnly"/>
+      <property name="showConfetti" type="Boolean" label="Show Confetti Animation" role="inputOnly"/>
+    </targetConfig>
+  </targetConfigs>
+</LightningComponentBundle>

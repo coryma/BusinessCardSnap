@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>CM Flow Divider</masterLabel>
+    <targets>
+        <target>lightning__FlowScreen</target>
+        <target>lightning__AppPage</target>
+        <target>lightning__RecordPage</target>
+        <target>lightning__HomePage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="color" type="String" label="Line Color" description="CSS color value" default="#d8dde6" />
+            <property name="thickness" type="String" label="Line Thickness" description="CSS length (e.g., 1px)" default="1px" />
+            <property name="marginTop" type="String" label="Top Margin" description="CSS length (e.g., 0.75rem)" default="0.75rem" />
+            <property name="marginBottom" type="String" label="Bottom Margin" description="CSS length (e.g., 0.75rem)" default="0.75rem" />
+            <property name="width" type="String" label="Width" description="CSS length or percentage" default="100%" />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

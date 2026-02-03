@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>CM_BC_Card_FallbackName</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Card fallback name</shortDescription>
+        <value>該名片</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_CreateOption_Contact</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Create option contact</shortDescription>
+        <value>連結現有客戶並建立聯絡人 (Contact)</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_CreateOption_Lead</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Create option lead</shortDescription>
+        <value>建立新的潛在客戶 (Lead)</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Err_BatchIdRequired</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>BatchId required</shortDescription>
+        <value>BatchId 不可為空</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Err_ContentVersionIdRequired</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>ContentVersionId required</shortDescription>
+        <value>ContentVersionId 不可為空</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Err_CreateTempFailed</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Create temp failed</shortDescription>
+        <value>建立名片暫存失敗：{0}</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Err_DuplicateMatch</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Duplicate match failed</shortDescription>
+        <value>比對現有客戶失敗，請稍後重試。</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Err_FileIdBlank</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>File id blank</shortDescription>
+        <value>傳入的檔案 ID 為空。</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Err_InvalidJsonArrayFromAI</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Invalid JSON array from AI</shortDescription>
+        <value>AI 回傳的格式不是有效的 JSON 陣列。回傳內容: {0}</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Err_JsonParseFailed</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>JSON parse failed</shortDescription>
+        <value>JSON 解析失敗 (第 {0} 筆)：{1}</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Err_NoFiles</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>No files</shortDescription>
+        <value>未收到檔案</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Err_NoUsableFileVersion</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>No usable file version</shortDescription>
+        <value>找不到可用的檔案版本（可能無權限或非最新版本）。</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Err_NotFinished</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Not finished</shortDescription>
+        <value>名片辨識尚未完成，請稍候…</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Err_ProgressFetch</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Progress fetch failed</shortDescription>
+        <value>取得進度失敗</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Err_PromptCallFailed</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Prompt call failed</shortDescription>
+        <value>呼叫 Prompt 時發生錯誤: {0}</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Err_QueueJobFailed</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Queue job failed</shortDescription>
+        <value>已建立暫存，但排入背景辨識失敗：{0}</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Err_ReadFileVersionFailed</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Read file version failed</shortDescription>
+        <value>讀取檔案版本失敗：{0}</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Err_SelectAccountForCard</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Select account for card</shortDescription>
+        <value>請為「{0}」選擇要連結的客戶。</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Err_Unknown</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Unknown error</shortDescription>
+        <value>發生未知錯誤</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Err_BatchIdNotReady</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>BatchId not ready</shortDescription>
+        <value>批次尚未建立，請先上傳名片。</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Err_Uploading</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Uploading in progress</shortDescription>
+        <value>請等待 Batch Id 生成後, 再進行下一步</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Fallback_BusinessCard</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Business card fallback</shortDescription>
+        <value>名片</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Flow_Success_Subtitle</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Flow success subtitle</shortDescription>
+        <value>請至潛在客戶名單查看最新紀錄</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Flow_Title</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Flow title</shortDescription>
+        <value>名片辨識</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Flow_Welcome_Desc</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Flow welcome description</shortDescription>
+        <value>您可以透過上傳檔案或拍照的方式，提供包含一張或多張名片照片</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Flow_Welcome_Title</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Flow welcome title</shortDescription>
+        <value>歡迎使用 AI 名片辨識小助手</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Image_Download</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Image download</shortDescription>
+        <value>下載原檔</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Image_LoadFailed</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Image load failed</shortDescription>
+        <value>圖片無法顯示（可能格式不支援或權限不足）</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Image_Loading</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Image loading</shortDescription>
+        <value>載入圖片中</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Image_MissingParams</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Image missing params</shortDescription>
+        <value>缺少 ContentVersionId / ContentDocumentId / ImageUrl</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Image_Title</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Image title</shortDescription>
+        <value>名片圖片</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Progress_Failed_Segment</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Progress failed segment</shortDescription>
+        <value>，失敗 {0}</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Progress_Preparing</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Progress preparing</shortDescription>
+        <value>正在準備中…</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Progress_Running</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Progress running</shortDescription>
+        <value>正在辨識名片中…（已處理 {0}/{1}{2}）</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Remark_Prefix</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Remark prefix</shortDescription>
+        <value>備註: {0}</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Review_Account_Label</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Account label</shortDescription>
+        <value>選擇要新增聯絡人的客戶</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Review_Account_Placeholder</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Account placeholder</shortDescription>
+        <value>請選擇客戶</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Review_Desc_Label</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Description label</shortDescription>
+        <value>備註 (Remark)</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Review_Dupe_Body</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Duplicate body</shortDescription>
+        <value>請選擇要建立新的潛在客戶，或是將聯絡資料新增到既有客戶底下。</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Review_Dupe_Title</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Duplicate title</shortDescription>
+        <value>找到相同公司名稱的現有客戶</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Review_FooterNote</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Footer note</shortDescription>
+        <value>＊按畫面右下角的「下一步」即可送出</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Review_NoCards_Body</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>No cards body</shortDescription>
+        <value>系統已完成解析，但未能在圖片中找到名片。你可以按「下一步」繼續，或返回重新上傳。</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Review_NoCards_Title</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>No cards title</shortDescription>
+        <value>沒有辨識到名片</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Review_Spinner</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Review spinner</shortDescription>
+        <value>辨識中</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Review_Title</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Review title</shortDescription>
+        <value>名片確認</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Upload_Label</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Upload label</shortDescription>
+        <value>選擇名片檔（可多選）</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Upload_Status</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Upload status</shortDescription>
+        <value>已上傳 {0} 個檔案 · 批次ID：{1}</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Upload_Title</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Upload title</shortDescription>
+        <value>上傳名片</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Success_Button</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Success button label</shortDescription>
+        <value>開啟潛在客戶</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Success_Line_Prefix</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Success line prefix</shortDescription>
+        <value>成功建立</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Success_Line_Suffix</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Success line suffix (plural)</shortDescription>
+        <value>筆客戶紀錄</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Success_Line_Suffix_Singular</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Success line suffix (singular)</shortDescription>
+        <value>筆客戶紀錄</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Success_Title</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Success title</shortDescription>
+        <value>建立完成</value>
+    </labels>
+</CustomLabels>

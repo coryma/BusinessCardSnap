@@ -1,0 +1,44 @@
+<template>
+  <lightning-card title={computedTitle} icon-name="standard:lead">
+    <div class="wrap">
+
+      <!-- Success animation: circle + checkmark -->
+      <div class="check">
+        <svg viewBox="0 0 52 52" class="checkmark" aria-hidden="true">
+          <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"></circle>
+          <path class="checkmark__check" fill="none" d="M14 27 l7 7 16 -16"></path>
+        </svg>
+      </div>
+
+      <!-- Success text (with count) -->
+      <div class="title">
+        {successLinePrefix} <span class="count">{countLabel}</span> {successLineSuffix}
+      </div>
+      <template if:true={subtitle}>
+        <div class="subtitle">{subtitle}</div>
+      </template>
+
+      <!-- Action button (optional) -->
+      <div class="actions">
+        <template if:true={showOpenButton}>
+          <lightning-button
+            variant="brand"
+            label={computedButtonLabel}
+            title={computedButtonLabel}
+            onclick={openRecord}>
+          </lightning-button>
+        </template>
+      </div>
+
+      <!-- Confetti petals (controlled by showConfetti) -->
+<template if:true={showConfetti}>
+  <div class="petals" aria-hidden="true">
+    <span class="petal p1"></span><span class="petal p2"></span><span class="petal p3"></span><span class="petal p4"></span>
+    <span class="petal p5"></span><span class="petal p6"></span><span class="petal p7"></span><span class="petal p8"></span>
+    <span class="petal p9"></span><span class="petal p10"></span><span class="petal p11"></span><span class="petal p12"></span>
+  </div>
+</template>
+
+    </div>
+  </lightning-card>
+</template>

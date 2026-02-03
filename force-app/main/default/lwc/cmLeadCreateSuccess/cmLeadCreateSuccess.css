@@ -1,0 +1,94 @@
+.wrap { padding: 1.25rem; text-align: center; }
+
+/* Checkmark animation */
+.check { display: inline-block; margin-top:.25rem; margin-bottom:.75rem; }
+.checkmark { width:84px; height:84px; display:inline-block; stroke-width:3; stroke:#2e844a;
+  stroke-miterlimit:10; box-shadow: inset 0 0 0 #2e844a; border-radius:50%; }
+.checkmark__circle { stroke-dasharray:166; stroke-dashoffset:166; stroke-width:3; stroke:#2e844a;
+  fill:none; animation: stroke 0.6s cubic-bezier(0.65,0,0.45,1) forwards; }
+.checkmark__check { transform-origin:50% 50%; stroke-dasharray:48; stroke-dashoffset:48;
+  animation: stroke 0.35s 0.6s cubic-bezier(0.65,0,0.45,1) forwards; }
+@keyframes stroke { 100% { stroke-dashoffset: 0; } }
+
+.title { font-size:1.125rem; font-weight:600; margin-top:.25rem; }
+.title .count { color:#2e844a; font-weight:700; }
+.subtitle { color: var(--lwc-colorTextWeak,#5e5e5e); margin-top:.25rem; }
+.actions { margin-top:.75rem; }
+
+/* Confetti */
+.confetti { position:relative; width:100%; height:0; }
+.confetti .p { position:absolute; top:-10px; left:50%; width:6px; height:12px; background:#1b96ff;
+  opacity:0; border-radius:1px; animation: fall 1.8s ease-in-out forwards; }
+.confetti .p2{background:#ff6e6e}.confetti .p3{background:#ffd166}.confetti .p4{background:#06d6a0}
+.confetti .p5{background:#a78bfa}.confetti .p6{background:#f97316}.confetti .p7{background:#ef4444}
+.confetti .p8{background:#22c55e}.confetti .p9{background:#14b8a6}.confetti .p10{background:#eab308}
+.confetti .p11{background:#f43f5e}.confetti .p12{background:#60a5fa}
+.confetti .p1 {transform:translateX(-120px) rotate(15deg);  animation-delay:.05s}
+.confetti .p2 {transform:translateX(-90px)  rotate(-12deg); animation-delay:.1s }
+.confetti .p3 {transform:translateX(-60px)  rotate(8deg);   animation-delay:.15s}
+.confetti .p4 {transform:translateX(-30px)  rotate(-18deg); animation-delay:.1s }
+.confetti .p5 {transform:translateX(0)      rotate(22deg);  animation-delay:.2s }
+.confetti .p6 {transform:translateX(30px)   rotate(-20deg); animation-delay:.05s}
+.confetti .p7 {transform:translateX(60px)   rotate(10deg);  animation-delay:.15s}
+.confetti .p8 {transform:translateX(90px)   rotate(-16deg); animation-delay:.25s}
+.confetti .p9 {transform:translateX(120px)  rotate(12deg);  animation-delay:.1s }
+.confetti .p10{transform:translateX(-150px) rotate(-10deg); animation-delay:.2s }
+.confetti .p11{transform:translateX(150px)  rotate(18deg);  animation-delay:.25s}
+.confetti .p12{transform:translateX(0)      rotate(-8deg);  animation-delay:.3s }
+@keyframes fall { 0%{opacity:0; transform:translateY(-10px) translateX(var(--x,0)) rotate(0)}
+  15%{opacity:1} 100%{opacity:0; transform:translateY(90px) translateX(var(--x,0)) rotate(180deg)} }
+
+ /* Petal container fixed at top of viewport (same as before) */
+.petals {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 0;
+  overflow: visible;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Petals: single drop, linear, no segments */
+.petal {
+  position: absolute;
+  top: -18px;                 /* Start above the viewport */
+  width: 12px;
+  height: 18px;
+  opacity: 0;
+  border-radius: 70% 70% 70% 70% / 100% 100% 40% 40%;
+  transform: rotate(0deg);
+  animation: petal-fall 2.6s linear forwards; /* ✅ single-segment, linear fall */
+}
+
+/* Colors (same as before) */
+.p1, .p5, .p9     { background: #f472b6; }
+.p2, .p6, .p10    { background: #fb7185; }
+.p3, .p7, .p11    { background: #f9a8d4; }
+.p4, .p8, .p12    { background: #fda4af; }
+
+/* Drop positions and delays (adjust density and timing) */
+.p1  { left: 5vw;  animation-delay: .05s; }
+.p2  { left: 12vw; animation-delay: .10s; }
+.p3  { left: 20vw; animation-delay: .15s; }
+.p4  { left: 28vw; animation-delay: .20s; }
+.p5  { left: 36vw; animation-delay: .12s; }
+.p6  { left: 44vw; animation-delay: .18s; }
+.p7  { left: 56vw; animation-delay: .08s; }
+.p8  { left: 64vw; animation-delay: .22s; }
+.p9  { left: 72vw; animation-delay: .14s; }
+.p10 { left: 80vw; animation-delay: .26s; }
+.p11 { left: 88vw; animation-delay: .16s; }
+.p12 { left: 94vw; animation-delay: .30s; }
+
+/* ✅ Single keyframe segment: top → bottom (100vh) */
+@keyframes petal-fall {
+  0%   { opacity: 0; transform: translateY(-10px) rotate(0deg) scale(1); }
+  5%   { opacity: 1; }                            /* Appear quickly (does not affect movement segments) */
+  100% { opacity: 0; transform: translateY(100vh) rotate(300deg) scale(0.96); }
+}
+
+/* Hide when prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .petal { animation: none; opacity: 0; }
+}
