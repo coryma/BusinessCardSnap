@@ -8,7 +8,7 @@
       "versionNumber": "1.0.1.NEXT"
     }
   ],
-  "name": "260201",
+  "name": "BusinessCardSnap",
   "namespace": "",
   "sfdcLoginUrl": "https://login.salesforce.com",
   "sourceApiVersion": "65.0",
