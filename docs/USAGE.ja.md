@@ -12,8 +12,8 @@
 
 ### 1.2 インストールリンク
 
-- Production: `https://login.salesforce.com/packaging/installPackage.apexp?p0=04tKj000000fSvEIAU`
-- Sandbox: `https://test.salesforce.com/packaging/installPackage.apexp?p0=04tKj000000fSvEIAU`
+- Production: `https://login.salesforce.com/packaging/installPackage.apexp?p0=04tKj000000fSvxIAE`
+- Sandbox: `https://test.salesforce.com/packaging/installPackage.apexp?p0=04tKj000000fSvxIAE`
 
 ### 1.3 インストール時の選択肢
 

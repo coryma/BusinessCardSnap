@@ -47,30 +47,42 @@ public with sharing class CM_BusinessCard_Json_Parser {
 
     private static Business_Card_Processed__e buildEvent(CM_BusinessCard_Controller.CM_CardData card) {
         Business_Card_Processed__e eventRecord = new Business_Card_Processed__e();
-        eventRecord.FirstName__c = clean(card.FirstName);
-        eventRecord.LastName__c = fallbackLastName(card);
-        eventRecord.Company__c = fallbackCompany(card);
-        eventRecord.Title__c = clean(card.Title);
-        eventRecord.Email__c = clean(card.Email);
-        eventRecord.Phone__c = clean(card.Phone);
-        eventRecord.MobilePhone__c = clean(card.MobilePhone);
-        eventRecord.Street__c = clean(card.Street);
-        eventRecord.City__c = clean(card.City);
-        eventRecord.State__c = clean(card.State);
-        eventRecord.PostalCode__c = clean(card.PostalCode);
-        eventRecord.Country__c = clean(card.Country);
-        eventRecord.Description__c = buildDescription(card);
+        eventRecord.FirstName__c = trimToField(clean(card.FirstName), Business_Card_Processed__e.FirstName__c);
+        eventRecord.LastName__c = trimToField(fallbackLastName(card), Business_Card_Processed__e.LastName__c);
+        eventRecord.Company__c = trimToField(fallbackCompany(card), Business_Card_Processed__e.Company__c);
+        eventRecord.Title__c = trimToField(clean(card.Title), Business_Card_Processed__e.Title__c);
+        eventRecord.Email__c = trimToField(clean(card.Email), Business_Card_Processed__e.Email__c);
+        eventRecord.Phone__c = trimToField(clean(card.Phone), Business_Card_Processed__e.Phone__c);
+        eventRecord.MobilePhone__c = trimToField(clean(card.MobilePhone), Business_Card_Processed__e.MobilePhone__c);
+        eventRecord.Street__c = trimToField(clean(card.Street), Business_Card_Processed__e.Street__c);
+        eventRecord.City__c = trimToField(clean(card.City), Business_Card_Processed__e.City__c);
+        eventRecord.State__c = trimToField(clean(card.State), Business_Card_Processed__e.State__c);
+        eventRecord.PostalCode__c = trimToField(clean(card.PostalCode), Business_Card_Processed__e.PostalCode__c);
+        eventRecord.Country__c = trimToField(clean(card.Country), Business_Card_Processed__e.Country__c);
+        eventRecord.Description__c = trimToField(buildDescription(card), Business_Card_Processed__e.Description__c);
         String createAs = resolveCreateAs(card);
-        eventRecord.Create_As__c = createAs;
-        eventRecord.LeadSource__c = clean(card.LeadSource);
+        eventRecord.Create_As__c = trimToField(createAs, Business_Card_Processed__e.Create_As__c);
+        eventRecord.LeadSource__c = trimToField(clean(card.LeadSource), Business_Card_Processed__e.LeadSource__c);
         eventRecord.Matched_Account_Id__c = 'Contact'.equalsIgnoreCase(createAs)
-            ? clean(card.ExistingAccountId)
+            ? trimToField(clean(card.ExistingAccountId), Business_Card_Processed__e.Matched_Account_Id__c)
             : null;
         return eventRecord;
     }
 
     private static String clean(String value) {
         return String.isBlank(value) ? null : value.trim();
+    }
+
+    private static String trimToField(String value, Schema.SObjectField fieldRef) {
+        if (String.isBlank(value) || fieldRef == null) {
+            return value == null ? null : value.trim();
+        }
+        Integer maxLen = fieldRef.getDescribe().getLength();
+        String trimmed = value.trim();
+        if (maxLen == null || maxLen <= 0 || trimmed.length() <= maxLen) {
+            return trimmed;
+        }
+        return trimmed.substring(0, maxLen);
     }
 
     private static String buildDescription(CM_BusinessCard_Controller.CM_CardData card) {

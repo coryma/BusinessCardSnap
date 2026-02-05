@@ -4,8 +4,8 @@
       "path": "force-app",
       "default": true,
       "package": "BusinessCardSnap",
-      "versionName": "ver 1.0.2",
-      "versionNumber": "1.0.2.NEXT"
+      "versionName": "ver 1.0.3",
+      "versionNumber": "1.0.3.NEXT"
     }
   ],
   "name": "BusinessCardSnap",
@@ -15,6 +15,7 @@
   "packageAliases": {
     "BusinessCardSnap": "0HoKj000000XuZYKA0",
     "BusinessCardSnap@1.0.2-3": "04tKj000000fSv9IAE",
-    "BusinessCardSnap@1.0.2-4": "04tKj000000fSvEIAU"
+    "BusinessCardSnap@1.0.2-4": "04tKj000000fSvEIAU",
+    "BusinessCardSnap@1.0.3-1": "04tKj000000fSvxIAE"
   }
 }

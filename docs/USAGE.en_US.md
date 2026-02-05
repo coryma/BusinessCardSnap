@@ -12,8 +12,8 @@ Before installing, go to **Setup → Einstein Setup** and turn **Turn on Einstei
 
 ### 1.2 Install links
 
-- Production: `https://login.salesforce.com/packaging/installPackage.apexp?p0=04tKj000000fSvEIAU`
-- Sandbox: `https://test.salesforce.com/packaging/installPackage.apexp?p0=04tKj000000fSvEIAU`
+- Production: `https://login.salesforce.com/packaging/installPackage.apexp?p0=04tKj000000fSvxIAE`
+- Sandbox: `https://test.salesforce.com/packaging/installPackage.apexp?p0=04tKj000000fSvxIAE`
 
 ### 1.3 Install options (install screen)
 
