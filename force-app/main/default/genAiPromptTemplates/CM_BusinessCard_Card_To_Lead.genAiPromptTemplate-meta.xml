@@ -317,7 +317,7 @@
   &quot;PostalCode&quot;: &quot;string&quot;,
   &quot;Country&quot;: &quot;string&quot;,
   &quot;Description&quot;: &quot;string&quot;,
-  &quot;TextId&quot;:  &quot;string&quot;,
+  &quot;TaxId&quot;:  &quot;string&quot;,
   &quot;Confidence&quot;: 0.0
  }
 ]
@@ -415,7 +415,7 @@
   &quot;PostalCode&quot;: &quot;string&quot;,
   &quot;Country&quot;: &quot;string&quot;,
   &quot;Description&quot;: &quot;string&quot;,
-  &quot;TextId&quot;:  &quot;string&quot;,
+  &quot;TaxId&quot;:  &quot;string&quot;,
   &quot;Confidence&quot;: 0.0
  }
 ]
@@ -514,7 +514,7 @@
   &quot;PostalCode&quot;: &quot;string&quot;,
   &quot;Country&quot;: &quot;string&quot;,
   &quot;Description&quot;: &quot;string&quot;,
-  &quot;TextId&quot;:  &quot;string&quot;,
+  &quot;TaxId&quot;:  &quot;string&quot;,
   &quot;Confidence&quot;: 0.0
  }
 ]
@@ -613,7 +613,7 @@
   &quot;PostalCode&quot;: &quot;string&quot;,
   &quot;Country&quot;: &quot;string&quot;,
   &quot;Description&quot;: &quot;string&quot;,
-  &quot;TaxtId&quot;:  &quot;string&quot;,
+  &quot;TaxId&quot;:  &quot;string&quot;,
   &quot;Confidence&quot;: 0.0
  }
 ]
@@ -714,7 +714,7 @@
   &quot;PostalCode&quot;: &quot;string&quot;,
   &quot;Country&quot;: &quot;string&quot;,
   &quot;Description&quot;: &quot;string&quot;,
-  &quot;TaxtId&quot;:  &quot;string&quot;,
+  &quot;TaxId&quot;:  &quot;string&quot;,
   &quot;Confidence&quot;: 0.0
  }
 ]
@@ -816,7 +816,7 @@
   &quot;PostalCode&quot;: &quot;string&quot;,
   &quot;Country&quot;: &quot;string&quot;,
   &quot;Description&quot;: &quot;string&quot;,
-  &quot;TaxtId&quot;:  &quot;string&quot;,
+  &quot;TaxId&quot;:  &quot;string&quot;,
   &quot;Confidence&quot;: 0.0
  }
 ]

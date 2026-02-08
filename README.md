@@ -5,6 +5,12 @@
 - 日本語: [docs/USAGE.ja.md](docs/USAGE.ja.md)
 - 한국어: [docs/USAGE.ko.md](docs/USAGE.ko.md)
 
+## Download / Install (2GP)
+
+- Version: `BusinessCardSnap@1.0.4-1` (`04tKj000000fSwHIAU`)
+- Production install: [https://login.salesforce.com/packaging/installPackage.apexp?p0=04tKj000000fSwHIAU](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tKj000000fSwHIAU)
+- Sandbox install: [https://test.salesforce.com/packaging/installPackage.apexp?p0=04tKj000000fSwHIAU](https://test.salesforce.com/packaging/installPackage.apexp?p0=04tKj000000fSwHIAU)
+
 ## Disclaimer (English)
 
 This project is provided "as is", without warranty of any kind, express or implied. The authors and contributors do not provide support, maintenance, or troubleshooting services and have no obligation to address errors or issues that may arise. Use at your own risk. This project is not affiliated with, endorsed by, or sponsored by Salesforce. "Salesforce" and related trademarks belong to their respective owners.
