@@ -12,8 +12,8 @@
 
 ### 1.2 安裝連結
 
-- Production：`https://login.salesforce.com/packaging/installPackage.apexp?p0=04tKj000000fSvxIAE`
-- Sandbox：`https://test.salesforce.com/packaging/installPackage.apexp?p0=04tKj000000fSvxIAE`
+- 安裝連結請以 `README.md` 中 **Download / Install (2GP)** 章節最新公布的版本為準。
+- 若本文件與 `README.md` 內容有差異，請優先以 `README.md` 為準。
 
 ### 1.3 安裝選項（安裝畫面）
 

@@ -12,8 +12,8 @@
 
 ### 1.2 설치 링크
 
-- Production: `https://login.salesforce.com/packaging/installPackage.apexp?p0=04tKj000000fSvxIAE`
-- Sandbox: `https://test.salesforce.com/packaging/installPackage.apexp?p0=04tKj000000fSvxIAE`
+- 설치 링크는 `README.md`의 **Download / Install (2GP)** 섹션에 게시된 최신 정보를 기준으로 사용하세요.
+- 이 문서와 `README.md` 내용이 다를 경우 `README.md`를 우선 적용하세요.
 
 ### 1.3 설치 옵션
 
