@@ -7,9 +7,9 @@
 
 ## Download / Install (2GP)
 
-- Version: `BusinessCardSnap@1.0.4-1` (`04tKj000000fSwHIAU`)
-- Production install: [https://login.salesforce.com/packaging/installPackage.apexp?p0=04tKj000000fSwHIAU](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tKj000000fSwHIAU)
-- Sandbox install: [https://test.salesforce.com/packaging/installPackage.apexp?p0=04tKj000000fSwHIAU](https://test.salesforce.com/packaging/installPackage.apexp?p0=04tKj000000fSwHIAU)
+- Version: `BusinessCardSnap@1.0.5-1` (`04tKj000000fSwMIAU`)
+- Production install: [https://login.salesforce.com/packaging/installPackage.apexp?p0=04tKj000000fSwMIAU](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tKj000000fSwMIAU)
+- Sandbox install: [https://test.salesforce.com/packaging/installPackage.apexp?p0=04tKj000000fSwMIAU](https://test.salesforce.com/packaging/installPackage.apexp?p0=04tKj000000fSwMIAU)
 
 ## Disclaimer (English)
 

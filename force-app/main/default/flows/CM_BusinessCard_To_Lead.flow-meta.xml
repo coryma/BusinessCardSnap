@@ -417,7 +417,7 @@
         <name>varLeadSource</name>
         <dataType>String</dataType>
         <isCollection>false</isCollection>
-        <isInput>false</isInput>
+        <isInput>true</isInput>
         <isOutput>false</isOutput>
         <value>
             <stringValue>Cold Call</stringValue>
