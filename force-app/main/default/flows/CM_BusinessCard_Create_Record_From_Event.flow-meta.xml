@@ -1,6 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
+        <name>Find_Contact_Duplicate</name>
+        <label>Find Contact Duplicate</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>CM_BusinessCard_Duplicate_Finder</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>IfContactIsNull</targetReference>
+        </connector>
+        <flowTransactionModel>Automatic</flowTransactionModel>
+        <inputParameters>
+            <name>targetObjectApiName</name>
+            <value>
+                <stringValue>Contact</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>email</name>
+            <value>
+                <elementReference>$Record.Email__c</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>phone</name>
+            <value>
+                <elementReference>$Record.Phone__c</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>mobilePhone</name>
+            <value>
+                <elementReference>$Record.MobilePhone__c</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>CM_BusinessCard_Duplicate_Finder</nameSegment>
+        <offset>0</offset>
+        <outputParameters>
+            <assignToReference>varMatchedContactId</assignToReference>
+            <name>matchedRecordId</name>
+        </outputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Find_Lead_Duplicate</name>
+        <label>Find Lead Duplicate</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>CM_BusinessCard_Duplicate_Finder</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>IfLeadIsNull</targetReference>
+        </connector>
+        <flowTransactionModel>Automatic</flowTransactionModel>
+        <inputParameters>
+            <name>targetObjectApiName</name>
+            <value>
+                <stringValue>Lead</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>email</name>
+            <value>
+                <elementReference>$Record.Email__c</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>phone</name>
+            <value>
+                <elementReference>$Record.Phone__c</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>mobilePhone</name>
+            <value>
+                <elementReference>$Record.MobilePhone__c</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>CM_BusinessCard_Duplicate_Finder</nameSegment>
+        <offset>0</offset>
+        <outputParameters>
+            <assignToReference>varMatchedLeadId</assignToReference>
+            <name>matchedRecordId</name>
+        </outputParameters>
+    </actionCalls>
+    <actionCalls>
         <name>Validate_LeadSource</name>
         <label>Validate Lead Source</label>
         <locationX>0</locationX>
@@ -8,7 +92,7 @@
         <actionName>CM_BusinessCard_LeadSource_Validator</actionName>
         <actionType>apex</actionType>
         <connector>
-            <targetReference>Get_Lead</targetReference>
+            <targetReference>Find_Lead_Duplicate</targetReference>
         </connector>
         <flowTransactionModel>Automatic</flowTransactionModel>
         <inputParameters>
@@ -50,7 +134,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Get_Contact</targetReference>
+                <targetReference>Find_Contact_Duplicate</targetReference>
             </connector>
             <label>Contact</label>
         </rules>
@@ -68,7 +152,7 @@
             <name>ContactIsNull</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Get_Contact.Id</leftValueReference>
+                <leftValueReference>varMatchedContactId</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
@@ -93,7 +177,7 @@
             <name>LeadIsNull</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>Get_Lead.Id</leftValueReference>
+                <leftValueReference>varMatchedLeadId</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
@@ -189,6 +273,12 @@
             </value>
         </inputAssignments>
         <inputAssignments>
+            <field>Description</field>
+            <value>
+                <elementReference>$Record.Description__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
             <field>Email</field>
             <value>
                 <elementReference>$Record.Email__c</elementReference>
@@ -210,12 +300,6 @@
             <field>MobilePhone</field>
             <value>
                 <elementReference>$Record.MobilePhone__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Description</field>
-            <value>
-                <elementReference>$Record.Description__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -411,62 +495,6 @@
         <object>Lead</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
-    <recordLookups>
-        <name>Get_Contact</name>
-        <label>Get Contact</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
-        <connector>
-            <targetReference>IfContactIsNull</targetReference>
-        </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>Email</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>$Record.Email__c</elementReference>
-            </value>
-        </filters>
-        <filters>
-            <field>Email</field>
-            <operator>IsNull</operator>
-            <value>
-                <booleanValue>false</booleanValue>
-            </value>
-        </filters>
-        <getFirstRecordOnly>true</getFirstRecordOnly>
-        <object>Contact</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordLookups>
-    <recordLookups>
-        <name>Get_Lead</name>
-        <label>Get Lead</label>
-        <locationX>0</locationX>
-        <locationY>0</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
-        <connector>
-            <targetReference>IfLeadIsNull</targetReference>
-        </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>Email</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>$Record.Email__c</elementReference>
-            </value>
-        </filters>
-        <filters>
-            <field>Email</field>
-            <operator>IsNull</operator>
-            <value>
-                <booleanValue>false</booleanValue>
-            </value>
-        </filters>
-        <getFirstRecordOnly>true</getFirstRecordOnly>
-        <object>Lead</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordLookups>
     <recordUpdates>
         <name>Update_Contact</name>
         <label>Update Contact</label>
@@ -477,13 +505,19 @@
             <field>Id</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>Get_Contact.Id</elementReference>
+                <elementReference>varMatchedContactId</elementReference>
             </value>
         </filters>
         <inputAssignments>
             <field>AccountId</field>
             <value>
                 <elementReference>$Record.Matched_Account_Id__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Description</field>
+            <value>
+                <elementReference>$Record.Description__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -502,12 +536,6 @@
             <field>MobilePhone</field>
             <value>
                 <elementReference>$Record.MobilePhone__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Description</field>
-            <value>
-                <elementReference>$Record.Description__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -534,7 +562,7 @@
             <field>Id</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>Get_Lead.Id</elementReference>
+                <elementReference>varMatchedLeadId</elementReference>
             </value>
         </filters>
         <inputAssignments>
@@ -621,7 +649,7 @@
             <field>Id</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>Get_Lead.Id</elementReference>
+                <elementReference>varMatchedLeadId</elementReference>
             </value>
         </filters>
         <inputAssignments>
@@ -724,6 +752,20 @@
     </variables>
     <variables>
         <name>varLeadSourceNormalized</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>varMatchedContactId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>varMatchedLeadId</name>
         <dataType>String</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>

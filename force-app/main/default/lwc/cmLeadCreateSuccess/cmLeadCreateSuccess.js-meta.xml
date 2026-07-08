@@ -11,14 +11,15 @@
   </targets>
   <targetConfigs>
     <targetConfig targets="lightning__FlowScreen">
-      <!-- ✅ Set to Integer -->
-      <property name="count" type="Integer" label="Success Count" role="inputOnly"/>
+      <!-- Keep legacy FlowScreen props role-less to stay upgrade-safe for orgs
+           that already reference the earlier unmanaged bundle. -->
+      <property name="count" type="Integer" label="Success Count"/>
       <property name="recordId" type="String" label="Lead Record Id (Optional)" role="inputOnly"/>
       <property name="title" type="String" label="Card Title (Default: Completed)" role="inputOnly"/>
-      <property name="subtitle" type="String" label="Subtitle/Description (Optional)" role="inputOnly"/>
+      <property name="subtitle" type="String" label="Subtitle/Description (Optional)"/>
       <property name="buttonLabel" type="String" label="Button Label (Default: Open Lead)" role="inputOnly"/>
-      <property name="showOpenButton" type="Boolean" label="Show Open Button" role="inputOnly"/>
-      <property name="showConfetti" type="Boolean" label="Show Confetti Animation" role="inputOnly"/>
+      <property name="showOpenButton" type="Boolean" label="Show Open Button"/>
+      <property name="showConfetti" type="Boolean" label="Show Confetti Animation"/>
     </targetConfig>
   </targetConfigs>
 </LightningComponentBundle>

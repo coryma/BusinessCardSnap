@@ -22,6 +22,34 @@
         <value>建立新的潛在客戶 (Lead)</value>
     </labels>
     <labels>
+        <fullName>CM_BC_Duplicate_Field_Email</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Duplicate field email</shortDescription>
+        <value>Email</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Duplicate_Field_Phone</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Duplicate field phone</shortDescription>
+        <value>電話號碼</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Duplicate_Object_Contact</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Duplicate object contact</shortDescription>
+        <value>Contact</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Duplicate_Object_Lead</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Duplicate object lead</shortDescription>
+        <value>Lead</value>
+    </labels>
+    <labels>
         <fullName>CM_BC_Err_BatchIdRequired</fullName>
         <language>zh_TW</language>
         <protected>false</protected>
@@ -47,7 +75,7 @@
         <language>zh_TW</language>
         <protected>false</protected>
         <shortDescription>Duplicate match failed</shortDescription>
-        <value>比對現有客戶失敗，請稍後重試。</value>
+        <value>比對現有資料失敗，請稍後重試。</value>
     </labels>
     <labels>
         <fullName>CM_BC_Err_FileIdBlank</fullName>
@@ -218,6 +246,41 @@
         <value>名片圖片</value>
     </labels>
     <labels>
+        <fullName>CM_BC_Preflight_Disclaimer</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Preflight disclaimer</shortDescription>
+        <value>這是送出前模擬結果；實際非同步建立仍可能因資料變更而不同。</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Preflight_Error</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Preflight error</shortDescription>
+        <value>無法完成建立前檢查：{0}</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Preflight_Loading</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Preflight loading</shortDescription>
+        <value>正在檢查建立規則…</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Preflight_Summary</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Preflight summary</shortDescription>
+        <value>預估可建立 {0} 筆，可能失敗 {1} 筆</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Preflight_Title</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Preflight title</shortDescription>
+        <value>建立前檢查</value>
+    </labels>
+    <labels>
         <fullName>CM_BC_Progress_Failed_Segment</fullName>
         <language>zh_TW</language>
         <protected>false</protected>
@@ -279,6 +342,20 @@
         <protected>false</protected>
         <shortDescription>Duplicate title</shortDescription>
         <value>找到相同公司名稱的現有客戶</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Review_Record_Dupe_Line</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Record duplicate line</shortDescription>
+        <value>重複的 {0}：{1}（比對欄位：{2}）</value>
+    </labels>
+    <labels>
+        <fullName>CM_BC_Review_Record_Dupe_Title</fullName>
+        <language>zh_TW</language>
+        <protected>false</protected>
+        <shortDescription>Record duplicate title</shortDescription>
+        <value>找到可能重複的既有資料</value>
     </labels>
     <labels>
         <fullName>CM_BC_Review_FooterNote</fullName>

@@ -1,7 +1,11 @@
 .waiting {
-min-height: 80px; /* Give the spinner some breathing room */
+  min-height: 80px; /* Give the spinner some breathing room */
 }
 
 .duplicate-guard {
   background-color: var(--lwc-colorBackgroundAlt, #f3f2f2);
+}
+
+.duplicate-notice p + p {
+  margin-top: 0.25rem;
 }

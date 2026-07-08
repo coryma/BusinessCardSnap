@@ -1,23 +1,30 @@
 <template>
   <lightning-card title={labels.reviewTitle} icon-name="standard:contact">
     <div class="slds-p-around_medium">
-
       <!-- Waiting state -->
       <template if:true={isWaiting}>
         <div class="slds-align_absolute-center slds-m-vertical_large">
-          <lightning-spinner alternative-text={labels.reviewSpinner} size="small"></lightning-spinner>
+          <lightning-spinner
+            alternative-text={labels.reviewSpinner}
+            size="small"
+          ></lightning-spinner>
         </div>
-        <lightning-progress-bar class="slds-m-top_small" value={uiProgress}></lightning-progress-bar>
-        <div class="slds-m-top_x-small slds-text-color_weak">{progressLabel}</div>
+        <lightning-progress-bar
+          class="slds-m-top_small"
+          value={uiProgress}
+        ></lightning-progress-bar>
+        <div class="slds-m-top_x-small slds-text-color_weak">
+          {progressLabel}
+        </div>
       </template>
 
       <!-- Empty state (finished with no cards) -->
       <template if:true={isNoCards}>
         <div class="slds-box slds-theme_alert-texture slds-m-bottom_small">
-          <div class="slds-text-heading_small slds-m-bottom_x-small">{labels.noCardsTitle}</div>
-          <div class="slds-text-color_weak">
-            {labels.noCardsBody}
+          <div class="slds-text-heading_small slds-m-bottom_x-small">
+            {labels.noCardsTitle}
           </div>
+          <div class="slds-text-color_weak">{labels.noCardsBody}</div>
         </div>
       </template>
 
@@ -26,46 +33,60 @@
         <template for:each={cards} for:item="c" for:index="idx">
           <div key={c._key} class="slds-box slds-m-bottom_small">
             <div class="slds-text-title_bold">
-              {c.LastName} {c.FirstName}<template if:true={c.Company}> · {c.Company}</template>
+              {c.LastName} {c.FirstName}<template if:true={c.Company}>
+                · {c.Company}</template
+              >
             </div>
             <div class="slds-text-body_small slds-m-bottom_x-small">
               <template if:true={c.Title}>{c.Title}</template>
               <template if:true={c.Email}> · {c.Email}</template>
               <template if:true={c.MobilePhone}> · {c.MobilePhone}</template>
             </div>
+            <template if:true={c.hasDuplicateNotices}>
+              <div
+                class="slds-box slds-theme_info slds-m-bottom_small duplicate-notice"
+              >
+                <div class="slds-text-title_bold slds-m-bottom_x-small">
+                  {labels.recordDupeTitle}
+                </div>
+                <template for:each={c.duplicateNotices} for:item="notice">
+                  <p key={notice.key} class="slds-text-body_small">
+                    {notice.message}
+                  </p>
+                </template>
+              </div>
+            </template>
+            <div class="slds-m-bottom_small create-target">
+              <lightning-radio-group
+                name={c._key}
+                label="建立為"
+                type="button"
+                data-index={idx}
+                value={c.CreateAs}
+                options={c.createOptions}
+                onchange={onCreateModeChange}
+              >
+              </lightning-radio-group>
+              <template if:true={c.showAccountPicker}>
+                <lightning-record-picker
+                  class="slds-m-top_small"
+                  data-index={idx}
+                  object-api-name="Account"
+                  value={c.ExistingAccountId}
+                  label={labels.accountLabel}
+                  placeholder={labels.accountPlaceholder}
+                  onchange={onAccountPickChange}
+                >
+                </lightning-record-picker>
+              </template>
+            </div>
             <lightning-textarea
               label={labels.descLabel}
               value={c.Description}
               data-index={idx}
-              onchange={onDescChange}>
+              onchange={onDescChange}
+            >
             </lightning-textarea>
-            <template if:true={c.hasAccountMatches}>
-              <div class="slds-box slds-theme_default slds-m-top_medium duplicate-guard">
-                <div class="slds-text-title_bold slds-m-bottom_x-small">{labels.dupeTitle}</div>
-                <p class="slds-text-body_small slds-m-bottom_small">
-                  {labels.dupeBody}
-                </p>
-                <lightning-radio-group
-                  class="slds-m-bottom_small"
-                  name={c._key}
-                  type="button"
-                  data-index={idx}
-                  value={c.CreateAs}
-                  options={c.createOptions}
-                  onchange={onCreateModeChange}>
-                </lightning-radio-group>
-                <template if:true={c.showAccountPicker}>
-                  <lightning-combobox
-                    data-index={idx}
-                    value={c.ExistingAccountId}
-                    options={c.accountOptions}
-                    label={labels.accountLabel}
-                    placeholder={labels.accountPlaceholder}
-                    onchange={onAccountPickChange}>
-                  </lightning-combobox>
-                </template>
-              </div>
-            </template>
           </div>
         </template>
         <div class="slds-text-color_weak slds-m-top_x-small">

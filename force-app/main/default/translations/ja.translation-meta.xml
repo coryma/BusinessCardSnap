@@ -17,6 +17,22 @@
         <label>新規リードを作成</label>
     </customLabels>
     <customLabels>
+        <name>CM_BC_Duplicate_Field_Email</name>
+        <label>メール</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Duplicate_Field_Phone</name>
+        <label>電話番号</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Duplicate_Object_Contact</name>
+        <label>取引先責任者</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Duplicate_Object_Lead</name>
+        <label>リード</label>
+    </customLabels>
+    <customLabels>
         <name>CM_BC_Err_BatchIdRequired</name>
         <label>BatchId は必須です。</label>
     </customLabels>
@@ -30,7 +46,7 @@
     </customLabels>
     <customLabels>
         <name>CM_BC_Err_DuplicateMatch</name>
-        <label>既存の取引先との照合に失敗しました。後でもう一度お試しください。</label>
+        <label>既存データとの照合に失敗しました。後でもう一度お試しください。</label>
     </customLabels>
     <customLabels>
         <name>CM_BC_Err_FileIdBlank</name>
@@ -129,6 +145,26 @@
         <label>名刺画像</label>
     </customLabels>
     <customLabels>
+        <name>CM_BC_Preflight_Disclaimer</name>
+        <label>これは送信前のシミュレーション結果です。実際の非同期作成はデータ変更により異なる場合があります。</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Preflight_Error</name>
+        <label>作成前チェックを完了できません: {0}</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Preflight_Loading</name>
+        <label>作成ルールを確認中...</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Preflight_Summary</name>
+        <label>作成可能見込み {0} 件、失敗の可能性 {1} 件</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Preflight_Title</name>
+        <label>作成前チェック</label>
+    </customLabels>
+    <customLabels>
         <name>CM_BC_Progress_Failed_Segment</name>
         <label>、失敗 {0}</label>
     </customLabels>
@@ -163,6 +199,14 @@
     <customLabels>
         <name>CM_BC_Review_Dupe_Title</name>
         <label>同じ会社名の既存取引先</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Review_Record_Dupe_Line</name>
+        <label>重複した{0}: {1}（照合項目: {2}）</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Review_Record_Dupe_Title</name>
+        <label>重複の可能性がある既存データ</label>
     </customLabels>
     <customLabels>
         <name>CM_BC_Review_FooterNote</name>

@@ -241,30 +241,8 @@
         </connector>
         <fields>
             <name>DisplayText1</name>
-            <fieldText>&lt;h2&gt;🤖 &lt;strong style=&quot;font-size: 16px;&quot;&gt;{!$Label.CM_BC_Flow_Welcome_Title}&lt;/strong&gt;&lt;/h2&gt;&lt;p&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;{!$Label.CM_BC_Flow_Welcome_Desc}&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;{!$Label.CM_BC_Flow_Welcome_Desc}&lt;/span&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
-            <styleProperties>
-                <verticalAlignment>
-                    <stringValue>top</stringValue>
-                </verticalAlignment>
-                <width>
-                    <stringValue>12</stringValue>
-                </width>
-            </styleProperties>
-        </fields>
-        <fields>
-            <name>line</name>
-            <extensionName>c:cmFlowDivider</extensionName>
-            <fieldType>ComponentInstance</fieldType>
-            <inputParameters>
-                <name>color</name>
-                <value>
-                    <stringValue>#808080</stringValue>
-                </value>
-            </inputParameters>
-            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-            <isRequired>true</isRequired>
-            <storeOutputAutomatically>true</storeOutputAutomatically>
             <styleProperties>
                 <verticalAlignment>
                     <stringValue>top</stringValue>

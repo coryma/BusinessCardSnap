@@ -1,6 +1,6 @@
 public with sharing class CM_BusinessCard_LeadSource_Validator {
     public class Request {
-        @InvocableVariable(required=true)
+        @InvocableVariable(required=false)
         public String leadSource;
     }
 
@@ -54,5 +54,39 @@ public with sharing class CM_BusinessCard_LeadSource_Validator {
             results.add(res);
         }
         return results;
+    }
+
+    public static String normalizeOrDefault(String leadSource) {
+        String normalized = normalize(leadSource);
+        return normalized == null ? 'Cold Call' : normalized;
+    }
+
+    public static String normalize(String leadSource) {
+        String cleaned = String.isBlank(leadSource) ? null : leadSource.trim();
+        if (cleaned == null) {
+            return null;
+        }
+
+        Map<String, String> normalizedByLower = activeLeadSourcesByLower();
+        String key = cleaned.toLowerCase();
+        return normalizedByLower.containsKey(key) ? normalizedByLower.get(key) : null;
+    }
+
+    private static Map<String, String> activeLeadSourcesByLower() {
+        Map<String, String> normalizedByLower = new Map<String, String>();
+        for (Schema.PicklistEntry pe : Lead.LeadSource.getDescribe().getPicklistValues()) {
+            if (!pe.isActive()) {
+                continue;
+            }
+            String val = pe.getValue();
+            if (String.isBlank(val)) {
+                continue;
+            }
+            String key = val.trim().toLowerCase();
+            if (!normalizedByLower.containsKey(key)) {
+                normalizedByLower.put(key, val.trim());
+            }
+        }
+        return normalizedByLower;
     }
 }

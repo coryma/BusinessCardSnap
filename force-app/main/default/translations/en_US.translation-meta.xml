@@ -17,6 +17,22 @@
         <label>Create new Lead</label>
     </customLabels>
     <customLabels>
+        <name>CM_BC_Duplicate_Field_Email</name>
+        <label>Email</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Duplicate_Field_Phone</name>
+        <label>Phone Number</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Duplicate_Object_Contact</name>
+        <label>Contact</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Duplicate_Object_Lead</name>
+        <label>Lead</label>
+    </customLabels>
+    <customLabels>
         <name>CM_BC_Err_BatchIdRequired</name>
         <label>BatchId is required.</label>
     </customLabels>
@@ -30,7 +46,7 @@
     </customLabels>
     <customLabels>
         <name>CM_BC_Err_DuplicateMatch</name>
-        <label>Failed to match existing accounts. Please try again later.</label>
+        <label>Failed to match existing records. Please try again later.</label>
     </customLabels>
     <customLabels>
         <name>CM_BC_Err_FileIdBlank</name>
@@ -129,6 +145,26 @@
         <label>Business Card Image</label>
     </customLabels>
     <customLabels>
+        <name>CM_BC_Preflight_Disclaimer</name>
+        <label>This is a pre-submit simulation. Actual asynchronous creation can still differ if data changes.</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Preflight_Error</name>
+        <label>Unable to complete the preflight check: {0}</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Preflight_Loading</name>
+        <label>Checking creation rules...</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Preflight_Summary</name>
+        <label>Estimated {0} can be created, {1} may fail</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Preflight_Title</name>
+        <label>Preflight Check</label>
+    </customLabels>
+    <customLabels>
         <name>CM_BC_Progress_Failed_Segment</name>
         <label>, failed {0}</label>
     </customLabels>
@@ -163,6 +199,14 @@
     <customLabels>
         <name>CM_BC_Review_Dupe_Title</name>
         <label>Existing accounts with the same company name</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Review_Record_Dupe_Line</name>
+        <label>Duplicate {0}: {1} (matched by: {2})</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Review_Record_Dupe_Title</name>
+        <label>Potential existing duplicates</label>
     </customLabels>
     <customLabels>
         <name>CM_BC_Review_FooterNote</name>

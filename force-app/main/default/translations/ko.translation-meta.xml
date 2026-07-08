@@ -17,6 +17,22 @@
         <label>새 리드 생성</label>
     </customLabels>
     <customLabels>
+        <name>CM_BC_Duplicate_Field_Email</name>
+        <label>이메일</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Duplicate_Field_Phone</name>
+        <label>전화번호</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Duplicate_Object_Contact</name>
+        <label>연락처</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Duplicate_Object_Lead</name>
+        <label>리드</label>
+    </customLabels>
+    <customLabels>
         <name>CM_BC_Err_BatchIdRequired</name>
         <label>BatchId가 필요합니다.</label>
     </customLabels>
@@ -30,7 +46,7 @@
     </customLabels>
     <customLabels>
         <name>CM_BC_Err_DuplicateMatch</name>
-        <label>기존 계정 매칭에 실패했습니다. 잠시 후 다시 시도하세요.</label>
+        <label>기존 데이터 매칭에 실패했습니다. 잠시 후 다시 시도하세요.</label>
     </customLabels>
     <customLabels>
         <name>CM_BC_Err_FileIdBlank</name>
@@ -129,6 +145,26 @@
         <label>명함 이미지</label>
     </customLabels>
     <customLabels>
+        <name>CM_BC_Preflight_Disclaimer</name>
+        <label>제출 전 시뮬레이션 결과입니다. 실제 비동기 생성은 데이터 변경으로 달라질 수 있습니다.</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Preflight_Error</name>
+        <label>생성 전 검사를 완료할 수 없습니다: {0}</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Preflight_Loading</name>
+        <label>생성 규칙 확인 중...</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Preflight_Summary</name>
+        <label>생성 가능 예상 {0}건, 실패 가능 {1}건</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Preflight_Title</name>
+        <label>생성 전 검사</label>
+    </customLabels>
+    <customLabels>
         <name>CM_BC_Progress_Failed_Segment</name>
         <label>, 실패 {0}</label>
     </customLabels>
@@ -163,6 +199,14 @@
     <customLabels>
         <name>CM_BC_Review_Dupe_Title</name>
         <label>같은 회사명의 기존 계정</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Review_Record_Dupe_Line</name>
+        <label>중복된 {0}: {1} (일치 항목: {2})</label>
+    </customLabels>
+    <customLabels>
+        <name>CM_BC_Review_Record_Dupe_Title</name>
+        <label>중복 가능성이 있는 기존 데이터</label>
     </customLabels>
     <customLabels>
         <name>CM_BC_Review_FooterNote</name>
