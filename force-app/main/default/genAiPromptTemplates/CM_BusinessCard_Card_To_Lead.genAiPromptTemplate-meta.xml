@@ -1050,6 +1050,7 @@
             <required>false</required>
         </inputs>
         <primaryModel>sfdc_ai__DefaultVertexAIGemini31FlashLite</primaryModel>
+        <responseFormat>JSON</responseFormat>
         <status>Published</status>
         <templateDataProviders>
             <definition>invocable://getRelatedList</definition>
