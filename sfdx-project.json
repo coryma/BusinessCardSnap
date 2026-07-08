@@ -4,8 +4,8 @@
       "path": "force-app",
       "default": true,
       "package": "BusinessCardSnap",
-      "versionName": "ver 1.0.8",
-      "versionNumber": "1.0.8.NEXT"
+      "versionName": "ver 1.0.9",
+      "versionNumber": "1.0.9.NEXT"
     }
   ],
   "name": "BusinessCardSnap",

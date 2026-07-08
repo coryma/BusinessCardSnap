@@ -85,6 +85,7 @@
             <required>false</required>
         </inputs>
         <primaryModel>sfdc_ai__DefaultVertexAIGemini35Flash</primaryModel>
+        <responseFormat>JSON</responseFormat>
         <status>Published</status>
         <templateDataProviders>
             <definition>invocable://getRelatedList</definition>
@@ -188,6 +189,7 @@
             <required>false</required>
         </inputs>
         <primaryModel>sfdc_ai__DefaultVertexAIGemini35Flash</primaryModel>
+        <responseFormat>JSON</responseFormat>
         <status>Published</status>
         <templateDataProviders>
             <definition>invocable://getRelatedList</definition>
